@@ -1,11 +1,18 @@
 import {IUser} from '../models/IUser';
 
-interface GetUsersResponseData {
+interface GetUsersResponse {
     items: IUser[];
     totalCount: number;
     error: 'null';
 }
 
+interface GetUsersRequest {
+    pageCount?: number;
+    page: number;
+    term: string;
+}
+
 export type {
-    GetUsersResponseData
+    GetUsersResponse,
+    GetUsersRequest
 }

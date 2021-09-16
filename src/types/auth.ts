@@ -11,8 +11,6 @@ interface LoginRequest {
     captcha: boolean;
 }
 
-
-
 export type {
     Auth,
     LoginRequest
