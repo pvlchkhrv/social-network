@@ -13,5 +13,5 @@ interface LoginRequest {
 
 export type {
     Auth,
-    LoginRequest
+    LoginRequest,
 }
