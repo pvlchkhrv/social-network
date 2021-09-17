@@ -8,3 +8,4 @@ export interface IUser {
     status: null | string;
     followed: boolean;
 }
+

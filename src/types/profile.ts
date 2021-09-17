@@ -1,21 +1,23 @@
-import {IProfile} from '../models/IProfile';
-
 interface GetProfileAndStatusRequest {
     userId: number;
 }
 
-interface PutProfileStatus {
+interface PutProfileStatusRequest {
     status: string;
 }
 
-interface GetProfilePhoto{
-
+interface ProfilePhoto {
+    small: string;
+    large: string;
 }
 
-interface PutProfilePhoto {
+interface PutProfilePhotoRequest {
     image: string
 }
 
-export  {
-
+export type{
+    GetProfileAndStatusRequest,
+    PutProfileStatusRequest,
+    ProfilePhoto,
+    PutProfilePhotoRequest
 }
