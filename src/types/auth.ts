@@ -11,9 +11,18 @@ interface LoginRequest {
     captcha: boolean;
 }
 
+interface AuthInitialState {
+    isAuth: boolean;
+    userId: string | null;
+    email: string | null;
+    login: string | null;
+
+}
+
 export type {
     Auth,
     LoginRequest,
+    AuthInitialState
 }
 
 

@@ -1,8 +1,8 @@
 import {instance} from './instance';
 import {GetUsersResponse} from '../types/users';
 
-export const authApi = {
+export const usersApi = {
     async getUsers() {
-        return await instance.get<GetUsersResponse>('auth/me');
+        return await instance.get<GetUsersResponse>('/users');
     },
 };
