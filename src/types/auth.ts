@@ -11,12 +11,17 @@ interface LoginRequest {
     captcha: boolean;
 }
 
-interface AuthInitialState {
-    isAuth: boolean;
+interface UserData {
     userId: string | null;
     email: string | null;
     login: string | null;
+}
 
+interface AuthInitialState {
+    isAuth: boolean;
+    userData: UserData,
+    isLoading: boolean;
+    error: string | null
 }
 
 export type {

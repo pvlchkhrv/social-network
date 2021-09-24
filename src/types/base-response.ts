@@ -1,10 +1,11 @@
 export interface BaseResponse<T> {
     resultCode: 0 | 1;
     messages: string[];
-    fieldsErrors: fieldError[];
+    fieldsErrors?: FieldError[];
     data: T;
 }
-interface fieldError {
+
+export interface FieldError {
     field: string;
     error: string;
 }
