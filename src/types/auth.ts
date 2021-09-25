@@ -1,9 +1,3 @@
-interface Auth {
-    id: number;
-    email: string | null;
-    login: string | null;
-}
-
 interface LoginRequest {
     email: string;
     password: string;
@@ -11,7 +5,7 @@ interface LoginRequest {
     captcha: boolean;
 }
 
-interface UserData {
+interface AuthUserData {
     userId: string | null;
     email: string | null;
     login: string | null;
@@ -19,13 +13,13 @@ interface UserData {
 
 interface AuthInitialState {
     isAuth: boolean;
-    userData: UserData,
-    isLoading: boolean;
+    userData: AuthUserData,
+    status: 'loading' | 'succeed' | 'failed' | 'idle'
     error: string | null
 }
 
 export type {
-    Auth,
+    AuthUserData,
     LoginRequest,
     AuthInitialState
 }

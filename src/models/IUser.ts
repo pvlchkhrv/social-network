@@ -1,11 +1,18 @@
-export interface IUser {
+interface IUser {
     id: number;
     name: string;
-    photos: {
-        small: null | string;
-        large: null | string;
-    },
+    photos: Photos;
     status: null | string;
     followed: boolean;
 }
 
+interface Photos {
+    small: null | string;
+    large: null | string;
+}
+
+
+export type{
+    IUser,
+    Photos
+}

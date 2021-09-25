@@ -1,10 +1,9 @@
-import {BaseResponse} from '../types/base-response';
-import {Auth, LoginRequest} from '../types/auth';
-import {instance} from './instance';
+import {AuthUserData, LoginRequest} from '../types/auth';
+import {BaseResponse, instance} from './instance';
 
 export const authApi = {
     async authMe() {
-        return await instance.get<BaseResponse<Auth>>('/auth/me');
+        return await instance.get<BaseResponse<AuthUserData>>('/auth/me');
     },
     async login(payload: LoginRequest) {
         return await instance.post<BaseResponse<{userId: string}>>('/auth/login', payload);
